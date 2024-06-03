@@ -8,7 +8,7 @@ const cors = require('cors');
 const userRouter = require('./routes/user.router')
 const templateRouter = require('./routes/template.router')
 const paymentRouter = require('./routes/payment.router')
-app.use(cors({ origin: process.env.CORS_ALLOW_ORIGIN }))
+app.use(cors({ origin: "*" }))
 app.use(express.json());
 
 require('./DB/db').connect();
